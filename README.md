@@ -1,29 +1,4 @@
-# BeTruthy
+DO NOT INSTALL!!!!!!!! THIS IS AN EXAMPLE OF A MALICIOUS GEM!!!
 
-TODO: Write a gem description
+If you've installed this, there is a good chance a sysadmin[number] user has been created on your machine and SSH has been enabled.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'be_truthy'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install be_truthy
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request

